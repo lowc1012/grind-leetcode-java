@@ -22,7 +22,7 @@ class Solution {
 
         // Finding nth node from end of list
         // This question is equal to finding (lenthOfList - n + 1) from head of list
-        // fast node move n steps forward first
+        // fast node moves n steps forward first
         for (int i = 0; i < n; i++) {
             fast = fast.next;
         }
@@ -33,8 +33,8 @@ class Solution {
             return head;
         }
 
-        // then two pointers move forward until fast at end of list
-        // slow will move (lenthOfList - n + 1) steps forward
+        // then two pointers move forward until fast is at end of list
+        // slow will move (lenthOfList - n) steps forward
         while (fast.next != null) {
             slow = slow.next;
             fast = fast.next;
