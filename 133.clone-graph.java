@@ -32,9 +32,10 @@ class Solution {
         }
 
         // old node maps to new node
+        // Space time complexity: O(V)
         Map<Node, Node> nodeMap = new HashMap<>();
         
-        // Use BFS
+        // Use BFS -> Time complexity: O(V+E)
         Queue<Node> queue = new LinkedList<>();
         nodeMap.put(node, new Node(node.val));
         queue.add(node);
@@ -47,7 +48,7 @@ class Solution {
                     queue.add(neighbor);
                 }
 
-                // get new node and add neighbors
+                // get new node and add its neighbors
                 Node newNode = nodeMap.get(visitedNode);
                 newNode.neighbors.add(nodeMap.get(neighbor));
             }
