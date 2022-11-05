@@ -7,7 +7,7 @@
 // @lc code=start
 class Solution {
     public String longestPalindrome(String s) {
-        // expand from midle
+        // expand from middle
         int len = s.length();
         int left = 0, right = 0, len1 = 0, len2 = 0;
         int maxLen = 0;
